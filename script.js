@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initDots();
   initAnimations();
+  initMobileMenu();
 });
 
 /* Create dots: 85% fewer, random positions, animated */
@@ -169,6 +170,26 @@ function initStaggerCards(cards, delayMs, translateY, easing) {
       { opacity: 1, transform: 'translateY(0)' }
     ], { duration, delay: i * staggerDelay, easing }).finished.then(() => {
       card.classList.add('staggered-visible');
+    });
+  });
+}
+
+function initMobileMenu() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (!menuToggle || !mobileMenu) return;
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
 }

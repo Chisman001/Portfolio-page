@@ -26,13 +26,28 @@
   <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0b]/90 backdrop-blur-md border-b border-white/5">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#home" class="text-sm font-semibold tracking-widest text-green-400/90 uppercase">Emmanuel Chisom</a>
-      <div class="flex gap-4 sm:gap-8 flex-wrap justify-end">
-        <a href="#home" class="nav-link text-sm sm:text-base hover:text-green-400">Home</a>
-        <a href="#about" class="nav-link text-sm sm:text-base hover:text-green-400">About</a>
-        <a href="#ai" class="nav-link text-sm sm:text-base hover:text-green-400">AI</a>
-        <a href="#projects" class="nav-link text-sm sm:text-base hover:text-green-400">Projects</a>
-        <a href="#contact" class="nav-link text-sm sm:text-base hover:text-green-400">Contact</a>
+      <!-- Desktop nav -->
+      <div class="hidden md:flex gap-8">
+        <a href="#home" class="nav-link hover:text-green-400">Home</a>
+        <a href="#about" class="nav-link hover:text-green-400">About</a>
+        <a href="#ai" class="nav-link hover:text-green-400">AI</a>
+        <a href="#projects" class="nav-link hover:text-green-400">Projects</a>
+        <a href="#contact" class="nav-link hover:text-green-400">Contact</a>
       </div>
+      <!-- Hamburger button (mobile only) -->
+      <button id="menu-toggle" class="mobile-menu-btn md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <a href="#home" class="mobile-nav-link nav-link">Home</a>
+      <a href="#about" class="mobile-nav-link nav-link">About</a>
+      <a href="#ai" class="mobile-nav-link nav-link">AI</a>
+      <a href="#projects" class="mobile-nav-link nav-link">Projects</a>
+      <a href="#contact" class="mobile-nav-link nav-link">Contact</a>
     </div>
   </nav>
 
