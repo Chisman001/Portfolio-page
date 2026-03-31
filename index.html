@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emmanuel Chisom | Full Stack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bright: {
+              green: '#22c55e',
+              emerald: '#10b981',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0a0a0b] text-gray-100 min-h-screen overflow-x-hidden">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0b]/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-sm font-semibold tracking-widest text-green-400/90 uppercase">Emmanuel Chisom</a>
+      <div class="flex gap-4 sm:gap-8 flex-wrap justify-end">
+        <a href="#home" class="nav-link text-sm sm:text-base hover:text-green-400">Home</a>
+        <a href="#about" class="nav-link text-sm sm:text-base hover:text-green-400">About</a>
+        <a href="#ai" class="nav-link text-sm sm:text-base hover:text-green-400">AI</a>
+        <a href="#projects" class="nav-link text-sm sm:text-base hover:text-green-400">Projects</a>
+        <a href="#contact" class="nav-link text-sm sm:text-base hover:text-green-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section 1: Home -->
+  <section id="home" class="first-section min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Background: Animated shapes + dots (contained in first section only) -->
+    <div id="dots-container" class="absolute inset-0 overflow-hidden first-section-bg"></div>
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+      <div class="shape shape-6"></div>
+      <div class="shape shape-7"></div>
+      <div class="shape shape-8"></div>
+      <div class="shape shape-9"></div>
+    </div>
+    
+    <!-- Gradient fade at bottom - fades to match HR, does not cross it -->
+    <div class="first-section-fade-overlay"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center hero-content overflow-x-hidden">
+      <!-- Fullstack banner - like reference -->
+      <div class="role-banner fade-in inline-block px-6 py-2 border border-green-500/50 rounded mb-8">
+        <p class="text-white text-sm tracking-[0.2em] uppercase">Full-Stack Developer & AI Specialist</p>
+      </div>
+
+      <h1 class="hero-name font-bold mb-4 overflow-visible">
+        <span class="hero-name-line block">
+          <span class="letter">E</span><span class="letter">M</span><span class="letter">M</span><span class="letter">A</span><span class="letter">N</span><span class="letter">U</span><span class="letter">E</span><span class="letter">L</span>
+        </span>
+        <span class="hero-name-line block">
+          <span class="letter">C</span><span class="letter">H</span><span class="letter">I</span><span class="letter">S</span><span class="letter">O</span><span class="letter">M</span>
+        </span>
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl mb-8 fade-in delay-2">I use <span class="text-green-400">Node.js</span>, <span class="text-green-400">Go</span> and <span class="text-green-400">AI</span></p>
+      
+      <div class="flex justify-center gap-6 mb-10 fade-in delay-3">
+        <a href="https://www.linkedin.com/in/chisom-emmanuel-bb183038a/" target="_blank" rel="noopener" class="social-link p-3 border border-green-500/50 hover:border-green-400 hover:bg-green-400/10 transition-all">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://github.com/Chisman001" target="_blank" rel="noopener" class="social-link p-3 border border-green-500/50 hover:border-green-400 hover:bg-green-400/10 transition-all">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="mailto:chismanemmans@gmail.com" class="social-link p-3 border border-green-500/50 hover:border-green-400 hover:bg-green-400/10 transition-all">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+      
+      <a href="#projects" class="inline-block px-10 py-4 bg-gradient-to-r from-green-500 to-emerald-600 border border-green-400/30 rounded font-semibold uppercase tracking-wider hover:from-green-400 hover:to-emerald-500 transition-all fade-in delay-4">View my work</a>
+    </div>
+  </section>
+
+  <hr class="section-divider border-0 h-px bg-gradient-to-r from-transparent via-green-500/40 to-transparent">
+
+  <!-- Section 2: About -->
+  <section id="about" class="min-h-screen py-24 px-6 section-fade">
+    <div class="max-w-6xl mx-auto">
+      <div class="about-heading flex items-center justify-center gap-4 mb-4">
+        <span class="section-heading-part h-px flex-1 max-w-16 bg-gradient-to-r from-transparent to-green-500/60"></span>
+        <h2 class="section-heading-part text-3xl md:text-4xl font-bold text-white uppercase tracking-widest">About Me</h2>
+        <span class="section-heading-part h-px flex-1 max-w-16 bg-gradient-to-l from-transparent to-green-500/60"></span>
+      </div>
+      <p class="text-2xl font-semibold text-white mb-2">Full Stack Developer</p>
+      <p class="text-gray-400 text-lg mb-12">Computer Science student at Landmark University</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="stat-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <p class="text-4xl font-bold text-green-400">3+</p>
+          <p class="text-gray-400">Years Coding Experience</p>
+        </div>
+        <div class="stat-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <p class="text-4xl font-bold text-green-400">6+</p>
+          <p class="text-gray-400">Projects Completed</p>
+        </div>
+        <div class="stat-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <p class="text-4xl font-bold text-green-400">3+</p>
+          <p class="text-gray-400">AI Models Used</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="tech-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5">
+          <h3 class="text-xl font-bold text-green-400 mb-4">Frontend</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>• React</li>
+            <li>• Tailwind CSS</li>
+            <li>• TypeScript</li>
+            <li>• Next.js</li>
+          </ul>
+        </div>
+        <div class="tech-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5">
+          <h3 class="text-xl font-bold text-green-400 mb-4">Backend</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>• Node.js</li>
+            <li>• Go</li>
+            <li>• Express</li>
+            <li>• REST APIs</li>
+          </ul>
+        </div>
+        <div class="tech-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5">
+          <h3 class="text-xl font-bold text-green-400 mb-4">Database</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>• PostgreSQL</li>
+            <li>• MongoDB</li>
+            <li>• Redis</li>
+            <li>• Firebase</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: AI -->
+  <section id="ai" class="min-h-screen py-24 px-6 section-fade">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">AI & Machine Learning</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mb-12">I integrate AI capabilities into applications, leveraging various models for intelligent solutions.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="ai-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 hover:border-green-500/30">
+          <div class="ai-card-icon text-green-400 text-2xl mb-2">🤖</div>
+          <h3 class="font-bold text-white mb-2">LLM Integration</h3>
+          <p class="text-gray-400 text-sm">Building apps with GPT, Claude, and custom models</p>
+        </div>
+        <div class="ai-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 hover:border-green-500/30">
+          <div class="ai-card-icon text-green-400 text-2xl mb-2">⚡</div>
+          <h3 class="font-bold text-white mb-2">AI APIs</h3>
+          <p class="text-gray-400 text-sm">Integrating OpenAI, Hugging Face, and more</p>
+        </div>
+        <div class="ai-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 hover:border-green-500/30">
+          <div class="ai-card-icon text-green-400 text-2xl mb-2">🔮</div>
+          <h3 class="font-bold text-white mb-2">Smart Features</h3>
+          <p class="text-gray-400 text-sm">Chatbots, summarization, and intelligent automation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Projects -->
+  <section id="projects" class="min-h-screen py-24 px-6 section-fade">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Projects</h2>
+      <p class="text-gray-400 text-lg mb-12">A showcase of my recent work and contributions.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="project-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 hover:border-green-500/30 group">
+          <h3 class="font-bold text-white mb-2 group-hover:text-green-400 transition-colors">TextileHub</h3>
+          <p class="text-gray-400 text-sm mb-4">A full-stack business management dashboard for tracking products, orders, customers, and revenue in real time.</p>
+          <a href="https://business-management-app-delta.vercel.app/dashboard" target="_blank" rel="noopener" class="text-green-400 text-sm hover:text-green-300 transition-colors">Live Demo →</a>
+        </div>
+        <div class="project-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 hover:border-green-500/30 group">
+          <h3 class="font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Castfor</h3>
+          <p class="text-gray-400 text-sm mb-4">A real-time weather app with hourly & 7-day forecasts, UV index, wind speed, humidity, and an interactive map.</p>
+          <a href="https://weather-app-rho-three-46.vercel.app/home" target="_blank" rel="noopener" class="text-green-400 text-sm hover:text-green-300 transition-colors">Live Demo →</a>
+        </div>
+        <div class="project-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 hover:border-green-500/30 group">
+          <h3 class="font-bold text-white mb-2 group-hover:text-green-400 transition-colors">TaskFlow</h3>
+          <p class="text-gray-400 text-sm mb-4">A task management app with user authentication, allowing users to sign up, sign in, and organise their daily tasks.</p>
+          <a href="https://task-manager-fjkv.vercel.app/" target="_blank" rel="noopener" class="text-green-400 text-sm hover:text-green-300 transition-colors">Live Demo →</a>
+        </div>
+        <div class="project-card stagger-card p-6 rounded-xl border border-white/10 bg-white/5 hover:border-green-500/30 group">
+          <h3 class="font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Expense Tracker</h3>
+          <p class="text-gray-400 text-sm mb-4">A lightweight personal finance tracker for logging income and expenses with a live running balance.</p>
+          <a href="https://chisman-expense-tracker.netlify.app/" target="_blank" rel="noopener" class="text-green-400 text-sm hover:text-green-300 transition-colors">Live Demo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Contact -->
+  <section id="contact" class="min-h-screen py-24 px-6 flex items-center justify-center section-fade">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="contact-title text-4xl md:text-6xl font-bold mb-6 text-white">
+        <span class="letter">L</span><span class="letter">e</span><span class="letter">t</span><span class="letter">'</span><span class="letter">s</span>
+        <span class="letter"> </span>
+        <span class="letter">C</span><span class="letter">o</span><span class="letter">n</span><span class="letter">n</span><span class="letter">e</span><span class="letter">c</span><span class="letter">t</span>
+      </h2>
+      <a href="mailto:chismanemmans@gmail.com" class="contact-cta inline-block px-10 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg font-semibold hover:from-green-400 hover:to-emerald-500 mb-12">Send a message</a>
+      
+      <div class="flex justify-center gap-8">
+        <a href="https://www.linkedin.com/in/chisom-emmanuel-bb183038a/" target="_blank" rel="noopener" class="contact-social-link text-gray-400 hover:text-green-400">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/Chisman001" target="_blank" rel="noopener" class="contact-social-link text-gray-400 hover:text-green-400">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:chismanemmans@gmail.com" class="contact-social-link text-gray-400 hover:text-green-400">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Gmail
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

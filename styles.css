@@ -1,0 +1,411 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient overlay - first section fades at bottom toward HR (fade does not cross HR) */
+.first-section-fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(to top, #0a0a0b, transparent);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Role banner - fullstack badge at top like reference */
+.role-banner {
+  letter-spacing: 0.2em;
+}
+
+/* Hero name - two lines, caps, scales to fit, bright shiny green */
+.hero-name {
+  font-size: clamp(2rem, 7vw, 6rem);
+  letter-spacing: 0.02em;
+  color: #22c55e;
+  text-shadow: 0 0 20px rgba(34, 197, 94, 0.5), 0 0 40px rgba(34, 197, 94, 0.3);
+}
+
+.hero-name-line {
+  line-height: 1.1;
+}
+
+.first-section-bg {
+  /* Clips dots/shapes to first section - does not cross hr */
+  contain: layout paint;
+}
+
+/* Thin sharp shapes - first section only, larger sizes */
+.shape {
+  position: absolute;
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}
+
+.shape-1 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 8%;
+  transform: rotate(45deg);
+  animation: rotateMove 12s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 85px;
+  height: 85px;
+  top: 55%;
+  right: 12%;
+  transform: rotate(45deg);
+  animation: rotateMove 15s ease-in-out infinite reverse;
+  animation-delay: -2s;
+}
+
+.shape-3 {
+  width: 120px;
+  height: 120px;
+  bottom: 15%;
+  left: 15%;
+  transform: rotate(45deg);
+  animation: rotateMove 18s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+.shape-4 {
+  width: 70px;
+  height: 70px;
+  top: 20%;
+  right: 22%;
+  transform: rotate(45deg);
+  animation: rotateMove 10s ease-in-out infinite reverse;
+}
+
+.shape-5 {
+  width: 90px;
+  height: 90px;
+  bottom: 30%;
+  right: 25%;
+  transform: rotate(45deg);
+  animation: rotateMove 14s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+.shape-6 {
+  width: 65px;
+  height: 65px;
+  top: 70%;
+  left: 25%;
+  transform: rotate(45deg);
+  animation: rotateMove 13s ease-in-out infinite;
+  animation-delay: -1s;
+}
+
+.shape-7 {
+  width: 95px;
+  height: 95px;
+  top: 35%;
+  left: 5%;
+  transform: rotate(45deg);
+  animation: rotateMove 16s ease-in-out infinite reverse;
+  animation-delay: -3s;
+}
+
+.shape-8 {
+  width: 75px;
+  height: 75px;
+  top: 8%;
+  right: 35%;
+  transform: rotate(45deg);
+  animation: rotateMove 11s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+.shape-9 {
+  width: 110px;
+  height: 110px;
+  bottom: 5%;
+  right: 8%;
+  transform: rotate(45deg);
+  animation: rotateMove 17s ease-in-out infinite reverse;
+  animation-delay: -7s;
+}
+
+@keyframes rotateMove {
+  0%, 100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  25% {
+    transform: rotate(135deg) translate(20px, -20px);
+  }
+  50% {
+    transform: rotate(225deg) translate(-15px, -10px);
+  }
+  75% {
+    transform: rotate(315deg) translate(-25px, 15px);
+  }
+}
+
+/* Fade in for home section elements */
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.fade-in.delay-2 { animation-delay: 0.3s; }
+.fade-in.delay-3 { animation-delay: 0.5s; }
+.fade-in.delay-4 { animation-delay: 0.7s; }
+
+/* Section fade-in */
+.section-fade {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Letter animation - up and down bounce */
+.letter {
+  display: inline-block;
+  opacity: 0;
+}
+
+.letter.animated {
+  opacity: 1;
+}
+
+/* Hero: fade + reduce size when scrolled past, fade in when scrolling up */
+.hero-content {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero-content.hero-scrolled {
+  opacity: 0.3;
+  transform: scale(0.6);
+  pointer-events: none;
+}
+
+/* First section: fade out when scrolling down (like section fade-in in reverse) */
+.first-section {
+  transition: opacity 0.6s ease;
+}
+
+.first-section.first-section-scrolled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Floating dots - random positions, moving animation */
+.floating-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.5);
+  animation: dotFloat1 4s ease-in-out infinite;
+}
+
+.floating-dot:nth-child(3n) {
+  animation-name: dotFloat2;
+}
+
+.floating-dot:nth-child(3n+1) {
+  animation-name: dotFloat3;
+}
+
+@keyframes dotFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(8px, -12px); }
+  50% { transform: translate(-6px, 6px); }
+  75% { transform: translate(10px, 8px); }
+}
+
+@keyframes dotFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(-10px, 5px); }
+  66% { transform: translate(6px, -8px); }
+}
+
+@keyframes dotFloat3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-8px, -10px); }
+}
+
+/* ========== Card hover transforms & transitions ========== */
+
+/* Stat cards - About section */
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.stat-card:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 0 24px rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+/* Tech cards - About section */
+.tech-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+.tech-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+/* AI cards */
+.ai-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.ai-card:hover {
+  transform: scale(1.03) translateY(-8px);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+.ai-card:hover .ai-card-icon {
+  transform: scale(1.15);
+}
+.ai-card-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Project cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.project-card .coming-soon {
+  transition: opacity 0.3s ease;
+}
+.project-card:hover .coming-soon {
+  animation: comingSoonPulse 1.5s ease-in-out infinite;
+}
+@keyframes comingSoonPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Contact CTA button */
+.contact-cta {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+}
+
+/* Contact social links */
+.contact-social-link {
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.contact-social-link:hover {
+  transform: translateX(4px);
+}
+.contact-social-link svg {
+  transition: transform 0.3s ease;
+}
+.contact-social-link:hover svg {
+  transform: scale(1.15);
+}
+
+/* Nav links - scale + underline on hover */
+.nav-link {
+  position: relative;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+.nav-link:hover {
+  transform: scale(1.05);
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to right, #22c55e, #10b981);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Stagger card initial state (before animation) */
+.stagger-card {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.stagger-card.staggered-visible,
+.section-heading-part.staggered-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Section heading stagger elements */
+.section-heading-part {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* Reduced motion - respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  .stat-card,
+  .tech-card,
+  .ai-card,
+  .ai-card-icon,
+  .project-card,
+  .coming-soon,
+  .contact-cta,
+  .contact-social-link,
+  .contact-social-link svg,
+  .nav-link,
+  .nav-link::after {
+    transition-duration: 0.01ms !important;
+  }
+  .stat-card:hover,
+  .tech-card:hover,
+  .ai-card:hover,
+  .project-card:hover {
+    transform: none;
+  }
+  .ai-card:hover .ai-card-icon {
+    transform: none;
+  }
+  .contact-cta:hover {
+    transform: none;
+  }
+  .contact-social-link:hover {
+    transform: none;
+  }
+  .contact-social-link:hover svg {
+    transform: none;
+  }
+  .nav-link:hover {
+    transform: none;
+  }
+  .project-card:hover .coming-soon {
+    animation: none;
+  }
+}
+
+/* Mobile responsive nav */
+@media (max-width: 768px) {
+  nav .flex.gap-8 {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
