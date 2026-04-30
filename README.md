@@ -42,7 +42,7 @@ A responsive, single-page portfolio showcasing skills, projects, and contact inf
 - **Home** – Hero with animated name, social links, and CTA
 - **About** – Stats, frontend/backend/database skill stacks
 - **AI** – LLM integration, AI APIs, and smart features overview
-- **Projects** – TextileHub, Castfor, TaskFlow, Expense Tracker
+- **Projects** – TextileHub, Castfor, TaskFlow, E-Commerce Textile, Chissss
 - **Contact** – Message form + social links
 
 ## Projects Showcased
@@ -52,7 +52,8 @@ A responsive, single-page portfolio showcasing skills, projects, and contact inf
 | **TextileHub** | Full-stack business management dashboard |
 | **Castfor** | Real-time weather app with interactive map |
 | **TaskFlow** | Task management app with authentication |
-| **Expense Tracker** | Personal finance tracker with live balance |
+| **E-Commerce Textile** | Full-stack lace e-commerce with cart and Paystack checkout |
+| **Chissss** | Social media app for short posts, follows, and personalised feed |
 
 ## Running Locally
 
